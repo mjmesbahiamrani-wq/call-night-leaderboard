@@ -1,0 +1,11 @@
+{
+  "name": "call-night-leaderboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Live leaderboard for a calling team, read from a shared Google Sheet. Deploys to Vercel in one click.",
+  "engines": { "node": ">=20.12" },
+  "scripts": {
+    "local": "node --env-file-if-exists=.env scripts/local.mjs"
+  }
+}

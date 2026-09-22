@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/callers.html" },
+    { "source": "/callers", "destination": "/callers.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(callers(.html)?)?",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ],
+  "functions": { "api/callers.js": { "maxDuration": 30 } }
+}
